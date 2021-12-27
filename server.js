@@ -8,7 +8,7 @@ var socketMap = {};
 // 自增编号
 var number = 0;
 
-server.listen(5001);
+server.listen(8080);
 
 app.use(express.static('public'));
 
