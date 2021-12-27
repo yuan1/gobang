@@ -2,7 +2,7 @@ var waiting = false;
 
 // 联机游戏
 function personPlay() {
-  socket = io.connect('http://127.0.0.1:5001');
+  socket = io.connect('/');
   socket.on('waiting', function () {
     waiting = true;
     me = false;

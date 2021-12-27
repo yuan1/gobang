@@ -1,7 +1,7 @@
 {
   "name": "gobang",
   "version": "1.0.0",
-  "description": "html5,css3练习小程序，一个五子棋小游戏，目前仅实现人机对战",
+  "description": "html5,css3练习小程序，一个五子棋小游戏",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
