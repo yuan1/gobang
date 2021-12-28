@@ -237,8 +237,8 @@ function showDialog(result, ok) {
     dialogTitle.innerText = result;
     btnOk.innerText = '确定';
     btnOk.onclick = function() {
-        ok();
         dialog.style.display = 'none';
+        ok();
     };
     btnBack.innerText = '取消';
     btnBack.onclick = function() {
