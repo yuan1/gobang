@@ -1,43 +1,49 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="user-scalable=no">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>五子棋</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>五子棋</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<div id="text-container">欢迎游戏，请选择游戏模式</div>
-<canvas id="chess"></canvas>
-<div class="button-container">
-  <div id="computer">人机对战</div>
-  <div id="person">联网对战</div>
-</div>
-<dialog id="dialog">
-  <div class="dialog-content">
-    <div id="dialog-title"></div>
-    <div class="dialog-button">
-      <div id="btn_ok"></div>
-      <div id="btn_back"></div>
+    <div id="text-container">欢迎游戏，请选择游戏模式</div>
+    <canvas id="chess"></canvas>
+    <div class="button-container">
+        <div id="computer">人机对战</div>
+        <div id="person">联网对战</div>
     </div>
-  </div>
-</dialog>
-<div id="btn-about">
-  <img src="./images/about.svg" width="30px" height="30px" alt="">
-</div>
-<dialog id="about">
-  <h3>关于</h3>
-  黑白子五子棋小游戏，人机对战联网对战两种模式，大家游戏愉快。
-  源码已开源，项目地址：<a href="https://github.com/yuan1/gobang">https://github.com/yuan1/gobang</a>
-  有任何问题联系作者主页：<a href="https://limingyuan.cf">https://limingyuan.cf</a>
-  &copy; fx (点击此框可关闭)
-</dialog>
-<script src="js/socket.io.js"></script>
-<script src="js/script.js"></script>
-<script src="js/computer.js"></script>
-<script src="js/person.js"></script>
+    <div id="dialog">
+        <div class="dialog-content">
+            <div id="dialog-title"></div>
+            <div class="dialog-button">
+                <div id="btn_ok"></div>
+                <div id="btn_back"></div>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <h3>关于</h3>
+        <p>
+            黑白子五子棋小游戏，人机对战联网对战两种模式，大家游戏愉快。
+        </p>
+        <p>
+            源码已开源，项目地址：<a href="https://github.com/yuan1/gobang" target="_blank">https://github.com/yuan1/gobang</a>
+        </p>
+        <p>
+            有任何问题联系作者主页： <a href="https://limingyuan.cf" target="_blank">https://limingyuan.cf</a>
+        </p>
+        <p>&copy;2021</p>
+    </div>
+    <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="js/canvas-nest.js"></script>
+    <script src="js/socket.io.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/computer.js"></script>
+    <script src="js/person.js"></script>
 </body>
+
 </html>

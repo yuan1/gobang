@@ -240,9 +240,9 @@ function showDialog(result, ok) {
   };
   btnBack.innerText = '取消';
   btnBack.onclick = function () {
-    dialog.close();
-  };
-  dialog.showModal();
+    dialog.style.display = 'none';
+  };  
+  dialog.style.display = 'block';
 }
 
 // 初始化
@@ -270,12 +270,3 @@ function reset() {
   over = false;
   me = true;
 }
-
-var about = document.getElementById('about');
-var btnAbout = document.getElementById('btn-about');
-btnAbout.onclick = function () {
-  about.showModal();
-};
-about.onclick = function () {
-  about.close();
-};
