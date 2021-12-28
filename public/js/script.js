@@ -1,6 +1,7 @@
 var canvasWidth = canvasHeight = Math.min(800, document.documentElement.clientWidth - 20);
 
 var textContainer = document.getElementById('text-container');
+var canvasContainer = document.getElementById('canvas-container');
 
 var canvas = document.getElementById('chess');
 var context = canvas.getContext('2d');
@@ -12,12 +13,17 @@ var dialogTitle = document.getElementById('dialog-title');
 var btnBack = document.getElementById('btn_back');
 var btnOk = document.getElementById('btn_ok');
 
+var point = document.getElementById('point');
+
 var ROW_COUNT = 15;
 
 var socket;
 
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
+
+canvasContainer.style.width = canvasWidth + 'px';
+canvasContainer.style.height = canvasHeight + 'px';
 
 var over = true;
 var i = 0,
@@ -76,6 +82,9 @@ function drawChessBoard() {
 
 // 落子
 function oneStep(i, j, me) {
+    point.style.left = realPadding + i * boxWidth - 10 + 'px'
+    point.style.top = realPadding + j * boxWidth - 10 + 'px'
+    point.style.display = 'block';
     context.beginPath();
     context.arc(realPadding + i * boxWidth, realPadding + j * boxWidth, radius, 0, 2 * Math.PI);
     context.closePath();
@@ -268,6 +277,9 @@ function reset() {
     context.clearRect(0, 0, canvasWidth, canvasHeight);
     initParams();
     drawChessBoard();
+    point.style.left = '0px';
+    point.style.top = '0px';
+    point.style.display = 'none';
     textContainer.innerText = '游戏开始';
     over = false;
     me = true;

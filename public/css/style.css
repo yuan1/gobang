@@ -13,13 +13,6 @@ body {
     background: #eee;
 }
 
-#chess {
-    background: rgba(255, 255, 255, .7);
-    display: block;
-    margin: 20px auto;
-    box-shadow: -2px -2px 2px #efefef, 5px 5px 5px #b9b9b9;
-}
-
 #text-container {
     text-shadow: 2px 2px 2px grey;
     color: black;
@@ -91,4 +84,48 @@ body {
     background: #fff;
     box-shadow: 2px 0 rgb(0 0 0 / 12%);
     border-radius: initial;
+}
+
+#canvas-container {
+    position: relative;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+#chess {
+    background: rgba(255, 255, 255, .7);
+    display: block;
+    box-shadow: -2px -2px 2px #efefef, 5px 5px 5px #b9b9b9;
+}
+
+#point {
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+    text-align: center;
+    display: none;
+}
+
+@media screen and (min-width: 640px) {
+    #point {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    #point {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #point {
+        font-size: 20px;
+    }
 }
