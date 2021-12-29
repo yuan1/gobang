@@ -83,7 +83,7 @@ function drawChessBoard() {
 // 落子
 function oneStep(i, j, me) {
     point.style.left = realPadding + i * boxWidth - 10 + 'px'
-    point.style.top = realPadding + j * boxWidth - 9 + 'px'
+    point.style.top = realPadding + j * boxWidth - 11 + 'px'
     point.style.display = 'block';
     context.beginPath();
     context.arc(realPadding + i * boxWidth, realPadding + j * boxWidth, radius, 0, 2 * Math.PI);
